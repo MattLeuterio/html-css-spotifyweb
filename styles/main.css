@@ -6,7 +6,26 @@
 }
 
 body {
+    font-family: 'Montserrat', sans-serif;
     color: #fff;
+}
+
+/* UTILITY */
+
+.u-listStyle--none {
+    list-style: none;
+}
+
+.u-flexGrow--1 {
+    flex-grow: 1;
+}
+
+.u-colorGray {
+   color: #606060;
+}
+
+.u-linkDecoration--none {
+    text-decoration: none;
 }
 
 /* LAYOUT */
@@ -16,36 +35,112 @@ body {
     height: 100vh;
 }
 
-
 /* MAIN WINDOW */
 #main-window {
-    flex-grow: 1;
     display: flex;
 }
 
 
 /* SIDEBAR */
 #sidebar {
-    flex-basis: 230px; /* larghezza sidebar */
     display: flex;
     flex-direction: column;
+    flex-basis: 230px; /* larghezza sidebar */
+    background: #000;
+    font-weight: 500;
+    font-size: 12px;
 }
 
-.sidebar-top {
-    flex-grow: 1;
-    background: #444;
+#sidebar-top__logo img {
+    width: 120px;
+    padding: 20px 0 20px 20px;
+}
+
+#sidebar-top__logo-sm {
+    display: none;
+}
+
+#sidebar-top__main-menu {
+    margin-top: 25px;
+}
+
+#sidebar-top__main-menu img {
+    width: 24px;
+    vertical-align: -webkit-baseline-middle;
+    margin-right: 5px;
+    margin-bottom: 8px;
+}
+
+#sidebar-top__main-menu ul li {
+    border-left: 2px solid #acfe2e;
+    padding-left: 20px;
+}
+
+#sidebar-top__playlist {
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+#sidebar-top__playlist h2 {
+    font-size: 14px;
+    margin-bottom: 5px;    
+}
+
+#sidebar-top__playlist h3 {
+    font-weight: 500;
+}
+
+#sidebar-top__playlist i {
+    background: #fff;
+    color: #000;
+    font-size: 18px;
+    padding: 8px 9px;
+    margin-top: 5px;
+    margin-right: 5px;
+}
+
+#sidebar-top__playlist ul li {
+    margin-top: 18px;
 }
 
 .sidebar-bottom {
-    height: 80px; /*debug*/
-    background: #222;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+}
+
+#sidebar-bottom__install-app {
+    border-bottom: 1px solid #606060;
+    padding-bottom: 10px;
+}
+
+#sidebar-bottom__install-app i {
+    margin-right: 5px;
+    border: 1px solid #606060;
+    border-radius: 50%;
+    padding: 2px;
+    font-size: 7px;
+    vertical-align: middle;
+}
+
+#sidebar-bottom__account {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+}
+
+#sidebar-bottom__account a img {
+    width: 20px;
+    height: 21px;
+    margin-right: 10px;
+    background: #606060;
+    border: 1px solid #606060;
+    border-radius: 50%;
 }
 
 /* CONTENT */
 #content {
     position: relative;
-    flex-grow: 1;
-    background: #000;
+    background: #141921;
 }
 
 .content-top-bar {
@@ -54,7 +149,7 @@ body {
     left: 0;
     width: 100%;
     height: 90px;
-    background: rgba(100, 50,0, .5);
+    background: rgba(0,0,0, .4);
     z-index: 1;
 }
 
@@ -83,4 +178,75 @@ body {
 #player {
     height: 80px; /*debug*/
     background: #333;
+}
+
+
+/* RESPONSIVE - Breakpoints */
+
+/* Small devices */
+@media (max-width: 576px) { 
+    #sidebar {
+        flex-basis: 30px; /* larghezza sidebar */
+    }
+
+    #sidebar-top__logo {
+        display: none;
+    }
+
+    #sidebar-top__logo-sm {
+        display: block;
+        width: 45px;
+        padding: 5px 10px;
+    }
+
+    #sidebar-top__main-menu {
+        margin-top: 10px;
+    }
+
+    #sidebar-top__main-menu a {
+        display: none;
+    }
+
+    #sidebar-top__main-menu ul li {
+        border-left: 1px solid #acfe2e;
+        padding-left: 10px;
+    }
+
+    #sidebar-top__playlist {
+        display: none;
+    }
+
+    .sidebar-bottom {
+        padding: 5px 10px;
+    }
+
+    #sidebar-bottom__install-app {
+        border-bottom: 0px solid #606060;
+        padding-bottom: 0;
+    }
+
+    #sidebar-bottom__install-app i {
+        margin-right: 0;
+        margin-left: 4px;
+        font-size: 7px;
+    }
+
+    #sidebar-bottom__install-app a {
+        display: none;
+    }
+
+    #sidebar-bottom__account a img {
+        margin: 0;
+    }
+
+    #sidebar-bottom__account h3 {
+        display: none;
+    }
+
+
+}
+
+/* Medium devices */
+@media all and (min-width: 577px) and (max-width: 1024) {
+
 }
