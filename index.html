@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spotify clone</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
     <!-- Main stylesheet -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- Google Font | Montserrat-->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap" rel="stylesheet">
     <!-- Font Awesome stylesheet -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
 </head>
@@ -69,30 +71,80 @@
 
             <!-- Content -->
             <div id="content" class="u-flexGrow--1">
-                <div class="content-top-bar">Top bar here</div>
-                <div class="scrollable">
-                    <nav class="content-menu">Menu</nav>
-
-                    <section class="content-category">
-                        <h2>Category title</h2>
+                <!-- TOP BAR -->
+                <div class="content__top-bar">
+                    <div class="top-bar__btn"><a class="u-colorWhite u-linkDecoration--none" href="#">EFFETTUA L'UPGRADE</a></div>
+                </div>
+                <!-- CONTENT__SCROLLABLE -->
+                <div class="content__scrollable">
+                    <nav class="scrollable__menu">
+                        <ul class="menu__list u-listStyle--none">
+                            <li class="menu__item">
+                                <a class="menu__link u-linkDecoration--none u-colorLightBlue" href="#">IN EVIDENZA</a>
+                                <div class="menu__border"></div>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link u-linkDecoration--none u-colorLightBlue" href="#">PODCAST</a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link u-linkDecoration--none u-colorLightBlue" href="#">CLASSIFICHE</a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link u-linkDecoration--none u-colorLightBlue" href="#">GENERI E MOOD</a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link u-linkDecoration--none u-colorLightBlue" href="#">NUOVE USCITE</a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link u-linkDecoration--none u-colorLightBlue" href="#">SCOPRI</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <section class="scrollable__category">
+                        <h2 class="category__title">Recently played</h2>
+                        <div class="category__recently"> 
+                            <div class="recently__item">
+                                <img src="assets/metal_lifting.jpg" alt="cover" class="item__cover">
+                                <h3 class="item__title"> Heavy Metal</h3>
+                                <h5 class="item__subtitle u-colorLightBlue">Subtitle</h5>
+                            </div>
+                            <div class="recently__item">
+                                <img src="assets/stranger.jpeg" alt="cover" class="item__cover">
+                                <h3 class="item__title">Stranger Things, Vol. 1 (a Netflix Original Series Soundtrack</h3>
+                                <h5 class="item__subtitle u-colorLightBlue">Kyle Dixon & Michael Stein</h5>
+                            </div>
+                            <div class="recently__item">
+                                <img src="assets/aquietplace.jpeg" alt="cover" class="item__cover">
+                                <h3 class="item__title">A quiet place</h3>
+                                <h5 class="item__subtitle u-colorLightBlue">Subtitle</h5>
+                            </div>
+                            <div class="recently__item">
+                                <img src="assets/split.jpeg" alt="cover" class="item__cover">
+                                <h3 class="item__title">Split</h3>
+                                <h5 class="item__subtitle u-colorLightBlue">Subtitle</h5>
+                            </div>
+                            <div class="recently__item">
+                                <img src="assets/cure.jpeg" alt="cover" class="item__cover">
+                                <h3 class="item__title">A cure for wellness</h3>
+                                <h5 class="item__subtitle u-colorLightBlue">Subtitle</h5>
+                            </div>
+                            <div class="recently__item">
+                                <img src="assets/sinister.jpeg" alt="cover" class="item__cover">
+                                <h3 class="item__title">Sinister</h3>
+                                <h5 class="item__subtitle u-colorLightBlue">Subtitle</h5>
+                            </div>
+                        </div>
                     </section>
-                    <section class="content-category">
-                        <h2>Category title</h2>
+                    <section class="scrollable__category">
+                        <div class="category__created">
+                            <h2>Creato per John Doe</h2>
+                        </div>
                     </section>
-                    <section class="content-category">
-                        <h2>Category title</h2>
-                    </section>
-                    <section class="content-category">
-                        <h2>Category title</h2>
-                    </section>
-                    <section class="content-category">
-                        <h2>Category title</h2>
-                    </section>
-                    <section class="content-category">
-                        <h2>Category title</h2>
-                    </section>
-                    <section class="content-category">
-                        <h2>Category title</h2>
+                    <section class="scrollable__category">
+                        <div class="category__artists">
+                            <h2>Artisti più popolari</h2>
+                        </div>
+                      
                     </section>
                 </div>
             </div>
