@@ -36,6 +36,15 @@ body {
     text-decoration: none;
 }
 
+.item__cover.item__cover--circle {
+    border: 1px solid transparent;
+    border-radius: 50%;
+}
+
+.item__cover.item__cover--circle img {
+    width: 50%;
+}
+
 /* LAYOUT */
 #app {
     display: flex;
@@ -218,6 +227,7 @@ body {
 .menu__list {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .menu__item {
@@ -257,17 +267,17 @@ body {
     font-size: 22px;
 }
 
-.category__recently {
+.category__item {
     display: flex;
     flex-basis: 100%;
 }
 
-.recently__item {
+.item__container {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    width: 100%;
+    width: calc(100% / 6);
 }
 
 .item__cover {
@@ -281,23 +291,38 @@ body {
     font-size: 14px;
 }
 
-.item__subtitle {
+.item__subtitle,
+.category__subtitle {
     margin-top: 5px;
     font-size: 11px;
     font-weight: 600;
 }
 
 /* BOTTOM PLAYER */
-#player {
-    height: 80px; /*debug*/
+
+.player {
+    padding: 15px;
+    min-height: 80px; /*debug*/
     background: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.player__album {
+    display: flex;
+    justify-content: center;
+}
+
+.album__cover {
+    width: 15%;
 }
 
 
 /* RESPONSIVE - Breakpoints */
 
 /* Small devices */
-@media (max-width: 600px) { 
+@media all and (max-width: 600px) { 
     #sidebar {
         flex-basis: 30px; /* larghezza sidebar */
     }
@@ -356,10 +381,35 @@ body {
         display: none;
     }
 
+    /* CONTENT */
+
+    .category__item {
+        flex-wrap: wrap;
+    }
+
+    .item__container {
+        width: calc(100% / 2);
+    }
+
 
 }
 
 /* Medium devices */
-@media all and (min-width: 601px) and (max-width: 1024) {
+@media all and (max-width: 1024px) and (min-width: 601px) {
+    .menu__item {
+        margin-right: 12px;
+    }
+
+    .menu__link  {
+        font-size: 12px;
+    }
+    
+    .category__item {
+        flex-wrap: wrap;
+    }
+
+    .item__container {
+        width: calc(100% / 4);
+    }
 
 }
