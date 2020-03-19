@@ -311,7 +311,9 @@ body {
 
 .player__album {
     display: flex;
+    justify-content: flex-start;
     align-items: center;
+    width: calc(100% / 3);
 }
 
 .player__album img {
@@ -353,6 +355,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    flex-grow: 1;
+    width: calc(100% / 3);
 }
 
 .console {
@@ -416,8 +420,9 @@ body {
 
 .player__option {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
+    width: calc(100% / 3);
 }
 
 .player__option a {
@@ -425,7 +430,7 @@ body {
 }
 
 .total-bar.total-bar--volume {
-    width: 200px;
+    width: 150px;
 }
 
 .partial-bar.partial-bar--volume {
@@ -516,10 +521,59 @@ body {
     }
 
     /* Bottom Player */
+    .player__album img {
+        width: 40px;
+    }
+    
+    .album {
+        padding: 0 5px 0 10px;
+    }
+    
+    .album__title {
+        font-size: 14px;
+        font-weight: 700;
+    }
+    
+    .album__song {
+        font-size: 10px;
+        font-weight: 600;
+    }
 
     .icons {
         display: flex;
         flex-direction: column;
+        margin-left: 0;
+    }
+    
+     .console__btn {
+        font-size: 20px;
+        vertical-align: middle;
+        padding: 5px;
+    }
+    
+    .console__btn:nth-child(3) {
+        font-size: 30px;
+    }
+    
+    .total-bar {
+        position: relative;
+        background: #606060;
+        width: 150px;
+        height: 4px;
+        border: 1px solid transparent;
+        border-radius: 10px;
+    }
+
+    .player__option a {
+        margin-right: 15px;
+    }
+    
+    .total-bar.total-bar--volume {
+        width: 70px;
+    }
+    
+    .partial-bar.partial-bar--volume {
+        width: 20px;
     }
 
 
@@ -527,6 +581,7 @@ body {
 
 /* Medium devices */
 @media all and (max-width: 1024px) and (min-width: 601px) {
+
     .menu__item {
         margin-right: 12px;
     }
@@ -543,4 +598,40 @@ body {
         width: calc(100% / 4);
     }
 
+    /* BOTTOM PLAYER */
+
+    .icons {
+        margin-left: 5px;
+    }
+    
+    .console__btn {
+        font-size: 20px;
+        vertical-align: middle;
+        padding: 5px;
+    }
+    
+    .console__btn:nth-child(3) {
+        font-size: 30px;
+    }
+    
+    .total-bar {
+        position: relative;
+        background: #606060;
+        width: 150px;
+        height: 4px;
+        border: 1px solid transparent;
+        border-radius: 10px;
+    }
+
+    .player__option a {
+        margin-right: 15px;
+    }
+    
+    .total-bar.total-bar--volume {
+        width: 70px;
+    }
+    
+    .partial-bar.partial-bar--volume {
+        width: 20px;
+    }
 }
