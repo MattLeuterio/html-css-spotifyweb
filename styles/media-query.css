@@ -1,0 +1,200 @@
+/* RESPONSIVE - Breakpoints */
+
+/* Small devices */
+@media all and (max-width: 600px) { 
+    #sidebar {
+        flex-basis: 30px; /* larghezza sidebar */
+    }
+
+    #sidebar-top__logo {
+        display: none;
+    }
+
+    #sidebar-top__logo-sm {
+        display: block;
+        width: 45px;
+        padding: 5px 10px;
+    }
+
+    #sidebar-top__main-menu {
+        margin-top: 10px;
+    }
+
+    #sidebar-top__main-menu a {
+        display: none;
+    }
+
+    #sidebar-top__main-menu ul li {
+        border-left: 1px solid transparent;
+        padding-left: 10px;
+    }
+
+    #sidebar-top__main-menu ul li:hover {
+        border-left: 2px solid #acfe2e;
+    }
+    
+    #sidebar-top__main-menu a:hover {
+        color: #fff;
+    }
+    
+
+    #sidebar-top__playlist {
+        display: none;
+    }
+
+    .sidebar-bottom {
+        padding: 5px 10px;
+    }
+
+    #sidebar-bottom__install-app {
+        border-bottom: 0px solid #606060;
+        padding-bottom: 0;
+    }
+
+    #sidebar-bottom__install-app i {
+        margin-right: 0;
+        margin-left: 4px;
+        font-size: 7px;
+    }
+
+    #sidebar-bottom__install-app a {
+        display: none;
+    }
+
+    #sidebar-bottom__account a img {
+        margin: 0;
+    }
+
+    #sidebar-bottom__account h3 {
+        display: none;
+    }
+
+    /* CONTENT */
+
+    .category__item {
+        flex-wrap: wrap;
+    }
+
+    .item__container {
+        flex-basis: calc(100% / 2);
+    }
+
+    /* Bottom Player */
+    .player__album img {
+        width: 40px;
+    }
+    
+    .album {
+        padding: 0 5px 0 10px;
+    }
+    
+    .album__title {
+        font-size: 14px;
+        font-weight: 700;
+    }
+    
+    .album__song {
+        font-size: 10px;
+        font-weight: 600;
+    }
+
+    .icons {
+        display: flex;
+        flex-direction: column;
+        margin-left: 0;
+    }
+    
+     .console__btn {
+        font-size: 20px;
+        vertical-align: middle;
+        padding: 5px;
+    }
+    
+    .console__btn:nth-child(3) {
+        font-size: 30px;
+    }
+    
+    .total-bar {
+        position: relative;
+        background: #606060;
+        width: 150px;
+        height: 4px;
+        border: 1px solid transparent;
+        border-radius: 10px;
+    }
+
+    .player__option a {
+        margin-right: 15px;
+    }
+    
+    .total-bar.total-bar--volume {
+        width: 70px;
+    }
+    
+    .partial-bar.partial-bar--volume {
+        width: 20px;
+    }
+
+
+}
+
+/* Medium devices */
+@media all and (max-width: 1024px) and (min-width: 601px) {
+
+    .menu__item {
+        margin-right: 12px;
+    }
+
+    .menu__link  {
+        font-size: 12px;
+    }
+    
+    .category__item {
+        flex-wrap: wrap;
+    }
+
+    .item__container {
+        flex-basis: calc(100% / 4);
+    }
+
+    .item__title {
+        font-size: 12px;
+    }
+
+    /* BOTTOM PLAYER */
+
+    .icons {
+        margin-left: 5px;
+    }
+    
+    .console__btn {
+        font-size: 20px;
+        vertical-align: middle;
+        padding: 5px;
+    }
+    
+    .console__btn:nth-child(3) {
+        font-size: 30px;
+    }
+    
+    .total-bar {
+        position: relative;
+        background: #606060;
+        width: 150px;
+        height: 4px;
+        border: 1px solid transparent;
+        border-radius: 10px;
+    }
+
+    .player__option a {
+        margin-right: 15px;
+    }
+    
+    .total-bar.total-bar--volume {
+        width: 70px;
+    }
+    
+    .partial-bar.partial-bar--volume {
+        width: 20px;
+    }
+}

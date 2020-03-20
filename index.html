@@ -8,6 +8,8 @@
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
     <!-- Main stylesheet -->
     <link rel="stylesheet" href="styles/main.css">
+    <!-- Media Query stylesheet -->
+    <link rel="stylesheet" href="styles/media-query.css">
     <!-- Google Font | Montserrat-->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap" rel="stylesheet">
     <!-- Font Awesome stylesheet -->
@@ -16,20 +18,29 @@
 <body>
     
     <div id="app">
+
         <!-- Main content -->
+
         <main id="main-window" class="u-flexGrow--1">
+
             <!-- Sidebar -->
+
             <aside id="sidebar">
                 <div class="sidebar-top u-flexGrow--1">
+
                     <!-- Logo -->
+
                     <div id="sidebar-top__logo">
                         <img src="assets/logo.svg" alt="Logo Spotify">
                     </div>
                     <!-- Logo Small -->
+
                     <div id="sidebar-top__logo-sm">
                         <img src="assets/logo-small.svg" alt="Logo Spotify">
                     </div>
+
                     <!-- Main Menu -->
+
                     <nav id="sidebar-top__main-menu">
                         <ul class="u-listStyle--none">
                             <li><img src="assets/home.svg" alt="Home Icon"><a class="u-colorGray u-linkDecoration--none" href="#">Home</a></li>
@@ -37,8 +48,11 @@
                             <li><img src="assets/libreria.svg" alt="Home Icon"><a class="u-colorGray u-linkDecoration--none" href="#">La tua libreria</a></li>
                         </ul>
                     </nav>
+
                     <!-- Playlist Section -->
+
                     <section id="sidebar-top__playlist">
+                        
                         <h2>PLAYLIST</h2>
                         <h3 class="u-listStyle--none"><a class="u-colorGray u-linkDecoration--none" href=""><i class="fas fa-plus"></i> Crea Playlist</a></h3>
                         <ul class="u-listStyle--none">
@@ -50,17 +64,24 @@
                             <li><a class="u-colorGray u-linkDecoration--none" href="#">Nome Playlist</a></li>
                             <li><a class="u-colorGray u-linkDecoration--none" href="#">Nome Playlist</a></li>
                         </ul>
+
                     </section>
                    
                 </div>
+
                 <!-- Sidebar Bottom -->
+
                 <div class="sidebar-bottom">
+
                     <!-- Install app -->
+
                     <div id="sidebar-bottom__install-app">
                         <i class="fas fa-arrow-down u-colorGray"></i> 
                         <a class="u-colorGray u-linkDecoration--none" href="#">Installa app</a>
                     </div>
+
                     <!-- Account -->
+
                     <div id="sidebar-bottom__account">
                         <a class="u-colorGray u-linkDecoration--none" href="#"><img src="assets/profile.svg" alt="user-pic"></a>
                         <h3>John Doe</h3>
@@ -70,18 +91,22 @@
             </aside>
 
             <!-- Content -->
+
             <div id="content" class="u-flexGrow--1">
+
                 <!-- TOP BAR -->
+
                 <div class="content__top-bar">
                     <div class="top-bar__btn"><a class="u-colorWhite u-linkDecoration--none" href="#">EFFETTUA L'UPGRADE</a></div>
                 </div>
+
                 <!-- CONTENT__SCROLLABLE -->
+
                 <div class="content__scrollable">
                     <nav class="scrollable__menu">
                         <ul class="menu__list u-listStyle--none">
                             <li class="menu__item">
                                 <a class="menu__link u-linkDecoration--none u-colorLightBlue" href="#">IN EVIDENZA</a>
-                                <div class="menu__border"></div>
                             </li>
                             <li class="menu__item">
                                 <a class="menu__link u-linkDecoration--none u-colorLightBlue" href="#">PODCAST</a>
@@ -99,66 +124,151 @@
                                 <a class="menu__link u-linkDecoration--none u-colorLightBlue" href="#">SCOPRI</a>
                             </li>
                         </ul>
-                    </nav>
+                    </nav>      
                     <section class="scrollable__category">
+
                         <h2 class="category__title">Recently played</h2>
+
                         <div class="category__item"> 
                             <div class="item__container">
-                                <img src="assets/metal_lifting.jpg" alt="cover" class="item__cover">
+                                <div class="album_box u-positionRelative overlay">
+                                    <div class="item__layover">
+                                        <a class="u-linkDecoration--none" href="#">
+                                          <i class="far fa-play-circle"></i>
+                                        </a>
+                                    </div>
+                                    <img src="assets/metal_lifting.jpg" alt="cover" class="item__cover">    
+                                </div>
                                 <h3 class="item__title"> Heavy Metal</h3>
-                                <h5 class="item__subtitle u-colorLightBlue">Subtitle</h5>
+                                <h5 class="item__subtitle u-colorLightBlue">Subtitle</h5>                                
                             </div>
+
                             <div class="item__container">
-                                <img src="assets/stranger.jpeg" alt="cover" class="item__cover">
+                                <div class="album_box u-positionRelative overlay">
+                                    <div class="item__layover">
+                                        <a class="u-linkDecoration--none" href="#">
+                                          <i class="far fa-play-circle"></i>
+                                        </a>
+                                    </div>
+                                    <img src="assets/stranger.jpeg" alt="cover" class="item__cover">    
+                                </div>                               
                                 <h3 class="item__title"> Stranger Things, Vol. 1 (a Netflix Original Series Soundtrack)</h3>
                                 <h5 class="item__subtitle u-colorLightBlue">Kyle Dixon & Michael Stein</h5>
                             </div>
+
                             <div class="item__container">
-                                <img src="assets/aquietplace.jpeg" alt="cover" class="item__cover">
+                                <div class="album_box u-positionRelative overlay">
+                                    <div class="item__layover">
+                                        <a class="u-linkDecoration--none" href="#">
+                                          <i class="far fa-play-circle"></i>
+                                        </a>
+                                    </div>
+                                    <img src="assets/aquietplace.jpeg" alt="cover" class="item__cover">   
+                                </div>                                                            
                                 <h3 class="item__title">A quiet place</h3>
                                 <h5 class="item__subtitle u-colorLightBlue">Subtitle</h5>
                             </div>
+
                             <div class="item__container">
-                                <img src="assets/split.jpeg" alt="cover" class="item__cover">
+                                <div class="album_box u-positionRelative overlay">
+                                    <div class="item__layover">
+                                        <a class="u-linkDecoration--none" href="#">
+                                          <i class="far fa-play-circle"></i>
+                                        </a>
+                                    </div>
+                                    <img src="assets/split.jpeg" alt="cover" class="item__cover">  
+                                </div>                                                     
                                 <h3 class="item__title">Split</h3>
                                 <h5 class="item__subtitle u-colorLightBlue">Subtitle</h5>
                             </div>
+
                             <div class="item__container">
-                                <img src="assets/cure.jpeg" alt="cover" class="item__cover">
+                                <div class="album_box u-positionRelative overlay">
+                                    <div class="item__layover">
+                                        <a class="u-linkDecoration--none" href="#">
+                                          <i class="far fa-play-circle"></i>
+                                        </a>
+                                    </div>
+                                    <img src="assets/cure.jpeg" alt="cover" class="item__cover">  
+                                </div>                                         
                                 <h3 class="item__title">A cure for wellness</h3>
                                 <h5 class="item__subtitle u-colorLightBlue">Subtitle</h5>
                             </div>
+
                             <div class="item__container">
-                                <img src="assets/sinister.jpeg" alt="cover" class="item__cover">
+                                <div class="album_box u-positionRelative overlay">
+                                    <div class="item__layover">
+                                        <a class="u-linkDecoration--none" href="#">
+                                          <i class="far fa-play-circle"></i>
+                                        </a>
+                                    </div>
+                                    <img src="assets/sinister.jpeg" alt="cover" class="item__cover">  
+                                </div>                                        
                                 <h3 class="item__title">Sinister</h3>
                                 <h5 class="item__subtitle u-colorLightBlue">Subtitle</h5>
                             </div>
                         </div>
                     </section>
+
                     <section class="scrollable__category">
+
                         <h2 class="category__title">Creato per John Doe</h2>
                         <h5 class="category__subtitle u-colorLightBlue">Più ascolti, più accurati saranno i suggerimenti.</h5>
+
                         <div class="category__item">
                             <div class="item__container">
-                                <img src="assets/radar.jpeg" alt="cover" class="item__cover">
+                                <div class="album_box u-positionRelative overlay">
+                                    <div class="item__layover">
+                                        <a class="u-linkDecoration--none" href="#">
+                                          <i class="far fa-play-circle"></i>
+                                        </a>
+                                    </div>
+                                    <img src="assets/radar.jpeg" alt="cover" class="item__cover">
+                                </div>                                        
                                 <h3 class="item__title">Release Radar</h3>            
                             </div>
+
                             <div class="item__container">
-                                <img src="assets/mixdaily.jpeg" alt="cover" class="item__cover">
+                                <div class="album_box u-positionRelative overlay">
+                                    <div class="item__layover">
+                                        <a class="u-linkDecoration--none" href="#">
+                                          <i class="far fa-play-circle"></i>
+                                        </a>
+                                    </div>
+                                    <img src="assets/mixdaily.jpeg" alt="cover" class="item__cover">
+                                </div>                                              
                                 <h3 class="item__title">Daily Mix 1</h3>                         
                             </div>
                         </div>
                     </section>
+
                     <section class="scrollable__category">
+
                         <h2 class="category__title">Artisti più popolari</h2>
                         <h5 class="category__subtitle u-colorLightBlue">Più ascolti, più accurati saranno i suggerimenti.</h5>
+
                         <div class="category__item">
                             <div class="item__container">
-                                <img src="assets/young.jpeg" alt="cover" class="item__cover item__cover--circle">
+                                <div class="album_box u-positionRelative overlay">
+                                    <div class="item__layover item__layover--circle">
+                                        <a class="u-linkDecoration--none" href="#">
+                                          <i class="far fa-play-circle"></i>
+                                        </a>
+                                    </div>
+                                    <img src="assets/young.jpeg" alt="cover" class="item__cover item__cover--circle">
+                                </div>  
                                 <h3 class="item__title">Lana Del Rey</h3>            
                             </div>
+
                             <div class="item__container">
-                                <img src="assets/einaudi.jpeg" alt="cover" class="item__cover item__cover--circle">
+                                <div class="album_box u-positionRelative overlay">
+                                    <div class="item__layover item__layover--circle">
+                                        <a class="u-linkDecoration--none" href="#">
+                                          <i class="far fa-play-circle"></i>
+                                        </a>
+                                    </div>
+                                    <img src="assets/einaudi.jpeg" alt="cover" class="item__cover item__cover--circle">
+                                </div>      
                                 <h3 class="item__title">Ludovico Einaudi</h3>                         
                             </div>
                         </div>                     
@@ -167,46 +277,78 @@
             </div>
         </main>
 
-        <!-- Bottom Player -->
-        <footer class="player">
-            <div class="player__album">
-                <img src="assets/sinister.jpeg" alt="" class=""> 
-                <div class="album">
-                    <h2 class="album__title">Sinister</h2>
-                    <h3 class="album__song u-colorGray">Brano Nome</h3>
-                </div>
-                <div class="icons">
-                    <a class="u-colorGray u-linkDecoration--none" href="#"><i class="far fa-heart"></i></a>
-                    <a class="u-colorGray u-linkDecoration--none" href="#"><i class="far fa-folder"></i></a>
-                </div>                    
-                            
+            <!-- Bottom Player -->
+    <footer id="player">
+
+        <div class="player__album">
+          <a href="#">
+            <img src="assets/sinister.jpeg" alt="">
+          </a>
+          <a href="#">
+            <ul>
+              <li>Sinister</li>
+              <li>Brano nome</li>
+            </ul>
+          </a>
+          <div class="icon">
+            <a href="#">
+              <i class="far fa-heart"></i>
+            </a>
+            <a href="#">
+              <i class="far fa-folder"></i>
+            </a>
+          </div>
+  
+  
+        </div>
+  
+        <div class="player__control">
+  
+          <div class="top-player__control">
+            <a href="#">
+              <i class="fas fa-random"></i>
+            </a>
+            <a href="#">
+              <i class="fas fa-step-backward"></i>
+            </a>
+            <a href="#">
+              <i class="far fa-play-circle"></i>
+            </a>
+            <a href="#">
+              <i class="fas fa-step-forward"></i>
+            </a>
+            <a href="#">
+              <i class="fas fa-redo-alt"></i>
+            </a>
+          </div>
+  
+          <div class="bottom-player__control u-positionRelative">
+            <h6>0:25</h6>
+            <div class="bar">
+              <i class="fas fa-circle"></i>
             </div>
-            <div class="player__play">
-                <div class="console">
-                    <a href="" class="console__btn u-colorWhite u-linkDecoration--none"><i class="fas fa-random"></i></a>
-                    <a href="" class="console__btn u-colorWhite u-linkDecoration--none"><i class="fas fa-step-backward"></i></i></a> 
-                    <a href="" class="console__btn u-colorWhite u-linkDecoration--none"><i class="far fa-play-circle"></i></a>
-                    <a href="" class="console__btn u-colorWhite u-linkDecoration--none"><i class="fas fa-step-forward"></i></a>
-                    <a href="" class="console__btn u-colorWhite u-linkDecoration--none"><i class="fas fa-redo-alt"></i></a>
-                </div>
-                <div class="progress-bar">
-                    <h6>0:25</h6>
-                    <div class="total-bar">
-                        <a href="#" class="partial-bar"><div class="point-bar"></div> </a>
-                    </div>
-                    <h6>4:35</h6>
-                </div>
-                  
-            </div>
-            <div class="player__option">
-                <a href="#" class="u-colorWhite u-linkDecoration--none"><i class="fas fa-list-ul"></i></a>
-                <a href="#" class="u-colorWhite u-linkDecoration--none"><i class="fas fa-tv"></i></a>
-                <a href="#" class="u-colorWhite u-linkDecoration--none"><i class="fas fa-volume-up"></i></a>
-                <div class="total-bar total-bar--volume">
-                    <a href="#" class="partial-bar partial-bar--volume"><div class="point-bar"></div> </a>
-                </div>
-            </div>
-        </footer>
+            <h6>4:35</h6>
+          </div>
+  
+        </div>
+  
+        <div class="volume">
+          <a href="#">
+            <i class="fas fa-list"></i>
+          </a>
+          <a href="#">
+            <i class="fas fa-tv"></i>
+          </a>
+          <a href="#">
+            <i class="fas fa-volume-up"></i>
+          </a>
+          <div class="bar">
+            <i class="fas fa-circle"></i>
+          </div>
+  
+        </div>
+  
+      </footer>
     </div>
 
 </body>
